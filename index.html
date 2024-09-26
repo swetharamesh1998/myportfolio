@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - About Me</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #6f42c1;
+            /* Purple */
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar {
+    z-index: 1030; /* Bootstrap default for sticky elements */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+        .about-section {
+            padding: 60px 0;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-img img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .underline {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .underline::before {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background-color: #ff6347;
+            /* Red underline */
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #6f42c1;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+        .projects-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+.card {
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 16px;
+}
+.skills-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.skill-item {
+    margin-bottom: 30px;
+}
+
+.skill-item img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.skill-item h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+.about-section {
+    padding: 60px 0;
+    background-color: #E6E6FA; /* Light lilac background */
+}
+.intro-section {
+    background-color: #fff;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.intro-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.intro-section .underline {
+    width: 60px;
+    height: 4px;
+    background-color: #ff6347; /* Red underline */
+    border-radius: 2px;
+}
+
+.intro-section p {
+    font-size: 18px;
+    color: #6c757d; /* Muted text */
+}
+/* Intro Section Styling */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0; /* Adds more vertical padding */
+    min-height: 100vh; /* Makes the intro section take full viewport height */
+    background-color: #E6E6FA; /* Secondary Purple Background */
+}
+
+
+
+
+.skill-item {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.05); /* Slightly zooms in the skill item on hover */
+}
+
+.skill-description, .skill-link {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.skill-item:hover .skill-description,
+.skill-item:hover .skill-link {
+    opacity: 1; /* Show description and link on hover */
+}
+
+.skill-description {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.skill-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.skill-link:hover {
+    text-decoration: underline;
+}
+
+.contact-section {
+    background-color: #6f42c1; /* Purple background */
+    padding: 60px 0;
+}
+
+.contact-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-section .icon {
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+.contact-section .icon-link:hover .icon {
+    filter: invert(1); /* Changes the icon color to white on hover */
+}
+
+.contact-section img {
+    max-width: 50px;
+}
+
+.contact-section p {
+    font-size: 14px;
+}
+
+.contact-section a.text-danger {
+    color: #ff6347; /* Red for the Colorlib link */
+}
+
+.contact-section .col-1 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+footer {
+    background-color: #6f42c1; /* Purple to match */
+    padding: 20px 0;
+    margin-top: 0; /* Ensure no margin-top */
+    color: white;
+    text-align: center;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg sticky-top" style="background-color: #6f42c1;">
+    <div class="container">
+        <img src="icons/logo.png" alt="Logo" class="mb-3 mx-3 my-3" style="max-width: 50px;">
+        <a class="navbar-brand text-white" href="#home">Swetha Ramesh</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link text-white" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="docs/SwethaRameshResume.pdf" target='_blank' download>
+                    <img src="icons/download.png" alt="Download Icon" style="max-width: 20px; margin-left: 2px;"> Resume 
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+    <!-- Intro Section -->
+    <section id="home" class="intro-section text-center d-flex align-items-center"
+        style="min-height: 100vh; background-color: #E6E6FA;">
+        <div class="container">
+            <h1 class="display-4 text-black">Hi! I'm Swetha</h1>
+            <div class="underline mx-auto my-3"></div>
+            <p class="lead text-black mb-4">Glad to see you here :)</p>
+            <p class="text-black">The following are a few projects I have made during Uni and my free time.</p>
+            
+        </div>
+    </section>
+
+<!-- About Section -->
+<section id="about" class="about-section" style="background-color: #bcbcec;">
+    <div class="container">
+        <div class="row about-content">
+            <div class="col-md-6 about-img">
+                <!-- Image Placeholder -->
+                <img src="images/about/1.jpg" alt="About Me Image" class="img-fluid w-75">
+            </div>
+            <div class="col-md-6 about-text">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+                <p>
+                    I'm Swetha Ramesh, a graduate with a Master’s in Advanced Computer Science and prior experience in
+                    automation testing.
+                <p>I specialize in transforming complex datasets into actionable insights using tools like Python, Power
+                    BI, and Tableau.</p>
+
+                </p>
+                <p>
+                    Besides data , I have a deep interest in learning new technologies, photography, and volunteering.
+                </p>
+                <p>
+                    I’ve lived in both the UK and India. I’m also fluent in English and I speak Tamil, Hindi and
+                    Kannada.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="projects-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">My Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm project-item">
+                    <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sentiment Analysis of UK Train Services Using Twitter Data</h5>
+                        <p class="card-text project-description">
+                            Implemented a project analyzing public sentiments toward UK Train Operating Companies (TOCs) using Twitter, employing NLP and machine learning techniques.
+                        </p>
+                        <a href="https://github.com/swetharamesh1998/Sentiment-analysis-and-visualizations-of-UK-TOC-tweets" target="_blank" class="btn btn-primary project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm project-item">
+                    <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Neighborhood Property Price Analysis and Predictive Modeling </h5>
+                        <p class="card-text project-description">
+                            Designed visualizations by employing Matplotlib, Plotly to examine, clean, and present intricate data sets. Discovered detailed patterns like how property prices vary by neighborhood and change over time.
+                        </p>
+                        <a href="https://github.com/swetharamesh1998/Neighborhood-Property-Price-Analysis-and-Predictive-Modeling-for-Strategic-Insights" target="_blank" class="btn btn-primary project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm project-item">
+                    <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Detection of Tomato Growth State and Surveillance System Using Computer Vision and IoT</h5>
+                        <p class="card-text project-description">
+                            Implemented an IoT and computer vision-powered data analytics system for monitoring tomato growth stages.
+                        </p>
+                        <a href="https://www.jetir.org/view?paper=JETIR2006083" target="_blank" class="btn btn-primary project-link">View Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm project-item">
+                    <img src="images/projects/4.jpg" class="card-img-top" alt="Project 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Distributed Whiteboard Application on Azure</h5>
+                        <p class="card-text project-description">
+                            Developed and deployed a real-time, distributed whiteboard application on Azure, showcasing expertise in cloud architecture, application development, and seamless integration with Azure Web PubSub.
+                        </p>
+                        <a href="#" target="_blank" class="btn btn-primary project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section  id="skills" class="skills-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Skills</h2>
+        <div class="row text-center">
+            <!-- Skill 1: Python -->
+            <div class="col-md-3">
+                <div class="skill-item">
+                    <img src="images/skills/1.png" alt="Python" class="img-fluid mb-3" style="max-width: 100px;">
+                    <h5>Python</h5>
+                    <p class="skill-description">
+                        Pandas, Numpy, Matplotlib, Seaborn, Plotly, Scikit-learn, NLTK, TextBlob, OpenCV.
+                    </p>
+                    <a href="#" class="text-primary skill-link">Link to course or bootcamp</a>
+                </div>
+            </div>
+
+            <!-- Skill 2: Data Visualization -->
+            <div class="col-md-3">
+                <div class="skill-item">
+                    <img src="images/skills/2.png" alt="Data Visualization" class="img-fluid mb-3"
+                        style="max-width: 100px;">
+                    <h5>Data Visualization</h5>
+                    <p class="skill-description">
+                        Tableau, Power Bi, Matplotlib, Seaborn, Plotly.
+                    </p>
+                    <a href="#" class="text-primary skill-link">Link to course or bootcamp</a>
+                </div>
+            </div>
+
+            <!-- Skill 3: SQL -->
+            <div class="col-md-3">
+                <div class="skill-item">
+                    <img src="images/skills/3.png" alt="SQL" class="img-fluid mb-3" style="max-width: 100px;">
+                    <h5>SQL</h5>
+                    <p class="skill-description">
+                        MySQL, PostgreSQL, SQLite, Microsoft SQL Server.
+                    </p>
+                    <a href="#" class="text-primary skill-link">Link to course or bootcamp</a>
+                </div>
+            </div>
+
+            <!-- Skill 4: Project Management -->
+            <div class="col-md-3">
+                <div class="skill-item">
+                    <img src="images/skills/4.png" alt="Project Management" class="img-fluid mb-3"
+                        style="max-width: 100px;">
+                    <h5>Project Management</h5>
+                    <p class="skill-description">
+                        Jira, Git, SVN.
+                    </p>
+                    <a href="#" class="text-primary skill-link">Link to course or bootcamp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Me Section -->
+<section id="contact" class="contact-section py-5" style="background-color: #6f42c1;">
+    <div class="container text-center">
+        <h3 class="text-white mb-4">Work With Me</h3>
+        <div class="row justify-content-center mb-4">
+            <!-- LinkedIn -->
+            <div class="col-1 mx-1">
+                <a href="http://www.linkedin.com/in/swetharamesh2" target="_blank" class="icon-link">
+                    <img src="icons/linkedin.png" alt="LinkedIn" class="img-fluid icon" style="max-width: 50px;">
+                </a>
+            </div>
+            <!-- GitHub -->
+            <div class="col-1 mx-1">
+                <a href="https://github.com/swetharamesh1998" target="_blank" class="icon-link">
+                    <img src="icons/github.png" alt="GitHub" class="img-fluid icon" style="max-width: 50px;">
+                </a>
+            </div>
+            <!-- Credly -->
+            <div class="col-1 mx-1">
+                <a href="https://www.credly.com/users/swetha-r.ce621914" target="_blank" class="icon-link">
+                    <img src="icons/credly.png" alt="Credly" class="img-fluid icon" style="max-width: 50px;">
+                </a>
+            </div>
+            <!-- email -->
+            <div class="col-1 mx-1">
+                <a href="mailto:swetha.ramesh1998@gmail.com" target="_blank" class="icon-link">
+                    <img src="icons/email.png" alt="email" class="img-fluid icon" style="max-width: 50px;">
+                </a>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 My Portfolio
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
