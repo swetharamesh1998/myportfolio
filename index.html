@@ -39,10 +39,7 @@ html {
 }
 
 
-        .about-section {
-            padding: 60px 0;
-        }
-
+        
         .about-content {
             display: flex;
             justify-content: space-between;
@@ -130,7 +127,7 @@ html {
     color: #333;
 }
 .about-section {
-    padding: 60px 0;
+    padding: 100px 0;
     background-color: #E6E6FA; /* Light lilac background */
 }
 .intro-section {
@@ -140,7 +137,7 @@ html {
 }
 
 .intro-section h1 {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: bold;
 }
 
@@ -161,11 +158,28 @@ html {
     justify-content: center;
     align-items: center;
     padding: 80px 0; /* Adds more vertical padding */
-    min-height: 100vh; /* Makes the intro section take full viewport height */
+    min-height: 90vh; /* Makes the intro section take full viewport height */
     background-color: #E6E6FA; /* Secondary Purple Background */
 }
 
 
+.experience-section {
+    background-color: #bcbcec; /* Light purple background */
+    padding: 60px 0; /* Adds vertical padding */
+}
+
+.experience-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Darker text color */
+    margin-bottom: 40px; /* Space between title and image */
+}
+
+.experience-img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;
+    margin: 0 auto; /* Centers the image */
+}
 
 
 .skill-item {
@@ -260,7 +274,7 @@ footer {
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #6f42c1;">
     <div class="container">
-        <img src="icons/logo.png" alt="Logo" class="mb-3 mx-3 my-3" style="max-width: 50px;">
+        <img src="icons/logo.png" alt="Logo" class="mb-1 mx-1 my-1" style="max-width: 50px;">
         <a class="navbar-brand text-white" href="#home">Swetha Ramesh</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -400,6 +414,15 @@ footer {
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+<!-- Experience Section -->
+<section id="experience" class="experience-section py-5" style="background-color: #bcbcec;">
+    <div class="container text-center">
+        <h2 class="mb-4">My Experience</h2>
+        <div class="experience-content">
+            <img src="C:\Users\sweth\OneDrive\Desktop\new-portfolio\portfolio\experience\experience.png" alt="Experience Image" class="img-fluid experience-img">
         </div>
     </div>
 </section>
