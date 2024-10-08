@@ -213,7 +213,7 @@ html {
     margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
-    color: #007bff;
+    color: #bf75f0;
     text-decoration: none;
 }
 
@@ -260,10 +260,16 @@ html {
     .contact-icon {
         width: 40px;  /* Reduce icon size for smaller screens */
     }}
-.btn-primary {
-    background-color: #6f42c1;
-    border: none;
+.btn-primary{
+    background-color: #6f42c1; /* Initial button color */
+    border: 1px;
     border-radius: 5px;
+    color: white; /* Button text color */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+.btn-primary:hover {
+    background-color: #C68FE6; /* Hover color */
+    color: black; /* Optional: Keep text color white on hover */
 }
 
 footer {
@@ -328,7 +334,8 @@ footer {
             <h1 class="display-4 text-black">Hi! I'm Swetha</h1>
             <div class="underline mx-auto my-3"></div>
             <p class="lead text-black mb-4">Glad to see you here :)</p>
-            
+            <a href="#about"
+                class="btn btn-primary project-link">About Me</a>
             
         </div>
     </section>
